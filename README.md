@@ -1,2 +1,2 @@
 # Portfolio
- Inho's Portfolio
+ Inho - portfolio
