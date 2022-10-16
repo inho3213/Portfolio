@@ -200,18 +200,25 @@
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="category__btn">All<span class="category__count">8</span></button>
+            <button class="category__btn active">All<span class="category__count">8</span></button>
             <button class="category__btn">Front-end<span class="category__count">4</span></button>
             <button class="category__btn">Mobile<span class="category__count">3</span></button>
             <button class="category__btn">Python<span class="category__count">3</span></button>
         </div>
         <div class="work__projects">
             <!-- target = blank 안해주면 현재창에서 열리게됨. 해주면 새 창에서 -->
-            <a href="https://inho3213.tistory.com/" class="project__img" target ="blank">
-                <img src="imgs/projectimgs/tistory.png" alt="project imgs">
+            <a href="https://inho3213.tistory.com/" class="project" target ="blank">
+                <img src="imgs/projectimgs/tistory.png" class="project__img"  alt="project imgs">
                 <div class="project__description">
                     <h3>Tistory Site</h3>
                     <span>코딩 공부 일지 및 백준 알고리즘 문제풀이...</span>
+                </div>
+            </a>
+            <a href="http://127.0.0.1:5500/index.html" class="project" target ="blank">
+                <img src="imgs/projectimgs/portfolio-web.png" class="project__img" alt="project imgs">
+                <div class="project__description">
+                    <h3>Portfolio Website</h3>
+                    <span>포트폴리오 웹사이트</span>
                 </div>
             </a>
         </div>
