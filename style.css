@@ -408,3 +408,23 @@ p {
     border-radius: var(--size-border-radius);
     color: var(--color-light-grey);
 }
+
+/* Contact */
+#contact{
+    background-color: #b9e4ed;
+}
+
+.contact__title {
+    margin: 32px 0;
+}
+
+.contact__links {
+    font-size: var(--font-large);
+    margin: 24px 0;
+}
+
+.contact__links i:hover{
+    transform: scale(1.1);
+    color: var(--color-blue);
+    transition: all var(--animation-duration) ease-in;
+}
