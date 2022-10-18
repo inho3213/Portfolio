@@ -50,3 +50,20 @@ document.addEventListener('scroll', ()=>{
     home.style.opacity =  1 - (window.scrollY/homeHeight)*1.2;
     //높이가 커질수록 투명도는 낮아져야함
 })
+
+
+// Arrow up Button
+const arrowupBtn = document.querySelector('.arrowup-button');
+arrowupBtn.addEventListener('click', ()=>{
+    scrollIntoView('#home');
+})
+
+//Show Arrow up
+const arrowup = document.querySelector('.arrowup-button')
+document.addEventListener('scroll', ()=>{
+    if(window.scrollY > homeHeight/2){
+        arrowup.classList.add('visible');
+    } else{
+        arrowup.classList.remove('visible');
+    }
+})

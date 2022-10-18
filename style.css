@@ -447,6 +447,27 @@ p {
     transition: all var(--animation-duration) ease-in;
 }
 
+.arrowup-button{
+    position: fixed;
+    right: 32px;
+    bottom: 52px;
+    font-size: 40px;
+    color: #a4a0dd;
+    transition: all 400ms ease;
+    /* 안보일때는 클릭 안되도록 하기 opacity 0이기만 하면 클릭은 됨 */
+    pointer-events: none;
+    opacity: 0;
+}
+
+.arrowup-button.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.arrowup-button:hover{
+    color: var(--color-blue);
+}
+
 
 /* screen 사이즈 작을때 under 768px */
 @media screen and (max-width: 768px) {
