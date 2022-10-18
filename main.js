@@ -33,7 +33,20 @@ contactBtn.addEventListener('click', ()=>{
     scrollIntoView('#contact');
 })
 
+
+//반복해서 쓰일 수 있으니 함수로
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: 'smooth'});
 }
+
+
+// home fade out when scroll down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', ()=>{
+    console.log(homeHeight);
+    home.style.opacity =  1 - (window.scrollY/homeHeight)*1.2;
+    //높이가 커질수록 투명도는 낮아져야함
+})
