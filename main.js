@@ -69,6 +69,7 @@ document.addEventListener('scroll', ()=>{
 })
 
 
+
 // Projects
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
@@ -80,6 +81,14 @@ workBtnContainer.addEventListener('click', (e)=>{
     if (filter == null) {
         return;
     }
+
+    //Remove selection
+    const active = document.querySelector('.category__btn.active')
+    active.classList.remove('active');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('active');
+
+
     projectContainer.classList.add('anim-out');
     setTimeout(()=>{
         projects.forEach((project)=>{
