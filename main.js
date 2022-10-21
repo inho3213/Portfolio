@@ -67,3 +67,29 @@ document.addEventListener('scroll', ()=>{
         arrowup.classList.remove('visible');
     }
 })
+
+
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e)=>{
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    // 앞에게 false라면 뒤에거 실행! - span으로 만든 버튼 누르게되었을때 설정하는 부분
+    if (filter == null) {
+        return;
+    }
+    projectContainer.classList.add('anim-out');
+    setTimeout(()=>{
+        projects.forEach((project)=>{
+            if(filter === '*' || filter === project.dataset.type){
+                project.classList.remove('invisible');
+            }
+            else{
+                project.classList.add('invisible');
+            }
+        });     
+        projectContainer.classList.remove('anim-out');
+    },180);
+});

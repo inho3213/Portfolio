@@ -346,10 +346,21 @@ p {
     background-color: #b9e4ed;
 }
 
+.project.invisible{
+    display: none;
+}
+
 .work__projects{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out{
+    opacity: 0;
+    transform: scale(0.9) translateY(40px);
 }
 
 .project__img{
