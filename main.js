@@ -22,8 +22,17 @@ navbarMenu.addEventListener('click', (event) => {
     if(link == null){
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 });
+
+//navbar toggle button
+const navbarToggle = document.querySelector('.navbar__toggle-btn');
+navbarToggle.addEventListener('click', ()=>{
+    navbarMenu.classList.toggle('open');
+});
+
+
 
 //contact me button -> scrolling
 
@@ -102,3 +111,4 @@ workBtnContainer.addEventListener('click', (e)=>{
         projectContainer.classList.remove('anim-out');
     },180);
 });
+
